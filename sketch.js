@@ -1,6 +1,6 @@
-var radius = 300;
-var butThickness = 15;
-var butSize = 200;
+var radius = 275;
+var butThickness = 20;
+var butSize = 250;
 var numOfButtons = 6;
 var numOfLinks = 7;
 var numOfPresses = 7;
@@ -11,7 +11,7 @@ var combos = [];
 var currentSeconds;
 
 function setup() {
-	createCanvas(2000,1000);
+	createCanvas(2000,1200);
 	noStroke();
 	angleMode(DEGREES);
 	generate();
