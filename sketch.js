@@ -11,7 +11,7 @@ var combos = [];
 var currentSeconds;
 
 function setup() {
-	createCanvas(1000,1200);
+	createCanvas(960,1200);
 	noStroke();
 	angleMode(DEGREES);
 	generate();
@@ -29,7 +29,8 @@ function generate(){
 }
 
 function draw() {
-	background(245);
+	// background(245);
+	background(22);
 	for(var i = 0; i < numOfLinks; i++){
 		links[i].show();
 	}
