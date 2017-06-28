@@ -11,7 +11,7 @@ var combos = [];
 var currentSeconds;
 
 function setup() {
-	createCanvas(600,600);
+	createCanvas(800,1000);
 	noStroke();
 	angleMode(DEGREES);
 	generate();
