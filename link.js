@@ -13,7 +13,7 @@ function Link(val1, val2){
 	this.show = function() {
 		this.calcCenter()
 		push();
-			strokeWeight(7);
+			strokeWeight(15);
 			stroke(150,200,200);
 			line(this.startX, this.startY, this.endX, this.endY);
 		pop();
