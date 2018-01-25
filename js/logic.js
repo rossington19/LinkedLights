@@ -1,0 +1,113 @@
+generate();
+
+function generate(){
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
+	generateCombos();
+	for(var i = 0; i < numOfButtons; i++){
+		buttons[i] = new Button(i);
+		buttons[i].calcCenter();
+	}
+	generateLinks();
+	genTimer();
+	genStart();
+	clickable = true;
+	resizeCanvas();
+}
+
+function generateCombos(){
+	for(var j = 0; j < numOfButtons; j++){
+		for(var k = j; k < numOfButtons; k++){
+			if(j != k)
+				combos.push(new Array(j,k));
+		}
+	}
+}
+
+function generateLinks(){
+	for(var i = 0; i < numOfLinks; i++){
+		var randVal = Math.floor(Math.random() * combos.length);
+		var a = combos[randVal][0];
+		var b = combos[randVal][1]
+		links[i] = new Link(a, b);
+		buttons[a].addLink(b);
+		buttons[b].addLink(a);
+		combos.splice(randVal, 1);
+	}
+}
+
+function genStart(){
+	var counter = 0;
+	do {
+		for(var i = 0; i < numOfPresses; i++){
+			buttons[Math.floor(Math.random() * numOfButtons)].clicked();
+		}
+		counter++;
+	} while(isCompleted() && counter < 1);
+	
+	if (isCompleted()){
+		restart();
+	}
+}
+
+function drawAll(){
+	drawTimer();
+	for(var i = 0; i < numOfLinks; i++){
+		links[i].draw();
+	}
+	for(var i = 0; i < numOfButtons; i++){
+		buttons[i].draw();
+	}
+}
+
+window.addEventListener('orientationchange', resizeCanvas);
+window.addEventListener('resize', resizeCanvas);
+
+function resizeCanvas() {
+	canvas.width = window.innerWidth;
+	canvas.height = window.innerHeight;
+	if(canvas.width < canvas.height) dim = canvas.width;
+	else dim =canvas.height;
+	butRadius = dim * ( (numOfButtons-4)*(-0.05)/(4) + 0.12 );
+	circRadius = (dim * 0.37)-butRadius;
+	lineThickness = dim * 0.015;
+	for(var i = 0; i < numOfButtons; i++){
+		buttons[i].calcCenter();
+	}
+	drawAll();
+}
+
+function isCompleted(){
+	var responce = true;
+	for(var i = 0; i < buttons.length; i++){
+		if(!buttons[i].active)
+			responce = false;
+	}
+	return responce;
+}
+
+function restart(){
+	buttons = [];
+	links = [];
+	combos = [];
+	clearInterval(timerID);
+	generate();
+}
+
+canvas.addEventListener('click', function(e) {
+	if(clickable){
+		for(var i = 0; i < numOfButtons; i++){
+			if(e.offsetX + butRadius > buttons[i].xLoc && e.offsetX - butRadius < buttons[i].xLoc){
+				if(e.offsetY + butRadius > buttons[i].yLoc && e.offsetY - butRadius < buttons[i].yLoc){
+					buttons[i].clicked();
+					if(isCompleted()) {
+						clickable = false;
+						setTimeout(function(){ 
+							document.getElementById('scoreVal').innerHTML = ++score;
+							restart();
+						}, 300);
+					}
+				}
+			}
+		}
+	}
+});
