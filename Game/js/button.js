@@ -43,3 +43,4 @@ function Button(num){
 		this.invert();
 	}
 }
+
