@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="css/gameIndex.css" />
+	<link rel="stylesheet" type="text/css" href="css/popupMenus.css" />
+	<link rel="stylesheet" type="text/css" href="../css/globalCSS.css"/>
+	<head>
+	</head>
+	
+	<body>
+	
+	<div id="menu">
+		<div class="topNavBar">
+			<div class="menuButCont">
+				<div class="navButton" id="closeBut" onclick="closeNav()">&times;</div>
+			</div>	 
+		</div>
+		<div class="menuCont">
+			<div class="menuTitle">Buttons</div>
+			<div class="menuSelCont">
+				<a class="menuSel" id="butDownArrow" onclick="menuDec('butDisp')" >◄</a>
+				<div class="menuSel" id="butDisp">0</div>
+				<a class="menuSel" id="butUpArrow" onclick="menuInc('butDisp')">►</a>
+			</div>
+			<div class="menuTitle">Links</div>
+			<div class="menuSelCont">
+				<a class="menuSel" id="linkDownArrow" onclick="menuDec('linkDisp')">◄</a>
+				<div class="menuSel" id="linkDisp">0</div>
+				<a class="menuSel" id="linkUpArrow"  onclick="menuInc('linkDisp')">►</a>
+			</div>
+			<div id="menuApply" onclick="menuApply()"> Apply </div>
+		</div>
+	</div>
+
+	<div id ="loserMenu">
+		<div class="menuCont">
+			<div class="popupTitle">Out of Time!</div>
+			<div class="popupButCont">
+				<a class="popupBut" id="retryBut" onclick="retryGame()">Retry</a>
+				<a class="popupBut" onclick="openNav()">Rules</a>
+				<a class="popupBut" href="../index.html">Exit</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="topNavBar">
+		<div id="scoreCont">
+			<div class="navButton" id="scoreVal">0</div>
+		</div>
+		<div class="menuButCont">
+			<div class="navButton" onclick="openNav()">☰</div>
+		</div>
+	</div> 
+
+	
+	<canvas id="gameCanvas"></canvas>
+
+
+	</body>
+
+	<script language="javascript" type="text/javascript" src="js/vars.js"></script>
+	<script language="javascript" type="text/javascript" src="js/button.js"></script>
+	<script language="javascript" type="text/javascript" src="js/link.js"></script>
+	<script language="javascript" type="text/javascript" src="js/timer.js"></script>
+	<script language="javascript" type="text/javascript" src="js/logic.js"></script>
+	<script language="javascript" type="text/javascript" src="js/menuControls.js"></script>
+	<script language="javascript" type="text/javascript" src="js/loserMenu.js"></script>
+</html>  

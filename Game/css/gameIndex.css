@@ -1,0 +1,100 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: "Helvetica", "Arial", sans-serif;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+}
+
+#menu {
+	height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    background: rgba(0,0,0, 0.75);
+    overflow-y: hidden;
+    transition: 0.5s;
+    color: #CCC;
+}
+
+
+#closeBut{
+	transition: none;
+	font-size: 4.5em;
+}
+
+.menuCont{
+	position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: 20%;
+}
+
+.menuTitle{
+	font-size: 2em;
+	margin-top: 1em;
+	margin-bottom: 0.2em;
+}
+
+.menuSel{
+	display: inline-block;
+	font-size: 2em;
+	padding: 0.2em;
+	margin-left: 0.3em;
+	margin-right: 0.3em;
+}
+
+.disabledButton{
+	visibility: hidden;
+}
+
+#menuApply{
+	margin-top: 2em;
+	display: inline-block;
+	font-size: 2em;
+	font-weight: bolder;
+	background-color: red;
+	border-radius: 0.3em;
+	padding: 0.5em;
+}
+
+
+/*************NAV**************/
+
+.topNavBar {
+	position: absolute;
+	width: 100%;
+	height: 15%;
+}
+
+.navButton{
+	position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+	color: #999;
+	font-size: 3em;
+}
+
+.menuButCont{
+	position: absolute;
+	right: 10%;
+	height: 100%;
+}
+
+#scoreCont{
+	position: absolute;
+	left: 10%;
+	height: 100%;
+}
+
+/******************************/
+
+#gameCanvas {
+	display: block;
+}
+
+/*******************************/
+

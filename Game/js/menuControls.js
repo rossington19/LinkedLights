@@ -9,6 +9,9 @@ function openNav() {
 
 function closeNav() {
     document.getElementById("menu").style.height = "0%";
+    document.getElementById("butDisp").innerHTML = numOfButtons;
+	document.getElementById("linkDisp").innerHTML = numOfLinks;
+	menuLimit();
 }
 
 function menuInc(elem) {
@@ -60,9 +63,6 @@ function menuApply() {
 	numOfButtons = document.getElementById("butDisp").innerHTML;
 	numOfLinks = document.getElementById("linkDisp").innerHTML;
 	closeNav();
-	setTimeout(function() { 
-		restart()
-	}, 400);
 }
 
 function factorial(n){

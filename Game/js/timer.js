@@ -32,7 +32,7 @@ function showTime(){
 }
 
 function checkTime(){
-	if(curTime <= 0){
+	if(curTime <= -0){
 		score = -1;
 		clearInterval(timerID);
 		ctx.fillStyle = "rgb(" + backCol[0] + "," + backCol[1] + "," + backCol[2] + ")";
@@ -41,5 +41,6 @@ function checkTime(){
 		ctx.fillRect(-10, (circRadius+(1.5*butRadius))*-1-10, 50, 20);
 		ctx.restore();
 		clickable = false;
+		openLoserMenu();
 	}
 }

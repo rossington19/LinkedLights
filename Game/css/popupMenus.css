@@ -1,0 +1,50 @@
+#loserMenu {
+	position: fixed;
+	top: 50%;
+	left: -50%;
+	transform: translate(-50%, -50%);
+	width: 75%;
+	height: 65%;
+	background: rgba(0,0,0, 0.75);
+  color: #CCC;
+  transition: 0.5s;
+  visibility: hidden;
+  border-radius: 30px;
+  max-width: 400px;
+  min-width: 250px;
+  max-height: 600px;
+  min-height: 450px;
+  z-index: 1;
+}
+
+.popupTitle{
+  font-size: 2.5em;
+  margin-top: 1em;
+  margin-bottom: 0.2em;
+}
+
+
+.popupButCont{
+  margin-top: 10vh;
+}
+
+.popupBut {
+  font-size: 1.5em;
+  text-decoration: none;
+  font-weight: bolder;
+  color: var(--backCol);
+  letter-spacing: 0.1em;
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: block;
+  width: 70%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  margin-top: 10%;
+  border-radius: 70px;
+  background: var(--lineCol);
+}
+
+#retryBut {
+  background: var(--actCol);
+}
