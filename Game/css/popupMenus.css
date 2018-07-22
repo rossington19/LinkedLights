@@ -17,15 +17,23 @@
   z-index: 1;
 }
 
-.popupTitle{
-  font-size: 2.5em;
-  margin-top: 1em;
-  margin-bottom: 0.2em;
+.popupMenuCont { 
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding-top: 10%;
 }
 
+.popupTitle{
+  font-size: 2.5em;
+}
 
 .popupButCont{
-  margin-top: 10vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
 }
 
 .popupBut {

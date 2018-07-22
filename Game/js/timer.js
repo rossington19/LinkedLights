@@ -23,7 +23,7 @@ function showTime(){
 	ctx.translate( canvas.width/2, canvas.height/2 );
 	ctx.rotate(1.5*Math.PI);
 	ctx.beginPath();
-	ctx.arc(0,0, circRadius+(1.5*butRadius), 0, (curTime/totTime)*1.999*Math.PI, true);
+	ctx.arc(0,0, circRadius+(1.5*butRadius), 0, (curTime/totTime)*1.9999*Math.PI, true);
 	ctx.lineWidth = lineThickness*1.4;
 	ctx.strokeStyle = "rgb(" + backCol[0] + "," + backCol[1] + "," + backCol[2] + ")";
 	ctx.stroke();
