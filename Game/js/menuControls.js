@@ -58,11 +58,8 @@ function menuLimit(){
 }
 
 function menuApply() {
-	score = 0;
-	document.getElementById('scoreVal').innerHTML = score;
-	numOfButtons = document.getElementById("butDisp").innerHTML;
-	numOfLinks = document.getElementById("linkDisp").innerHTML;
-	closeNav();
+	document.getElementById("menu").style.height = "0%";
+	retryGame();
 }
 
 function factorial(n){

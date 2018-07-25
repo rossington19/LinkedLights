@@ -10,10 +10,9 @@
 	<body>
 	
 	<div id="menu">
-		<div class="topNavBar">
-			<div class="menuButCont">
-				<div class="navButton" id="closeBut" onclick="closeNav()">&times;</div>
-			</div>	 
+		<div id="menuNavBar">
+			<a class="navButton" id="navExit" href="../index.html">Exit</a>
+			<div class="navButton" id="closeBut" onclick="closeNav()">&times;</div>
 		</div>
 		<div class="menuCont">
 			<div class="menuTitle">Buttons</div>
@@ -34,7 +33,7 @@
 
 	<div id ="loserMenu">
 		<div class="popupMenuCont">
-			<div class="popupTitle">Out of Time!</div>
+			<div id="popupTitle">Out of Time!</div>
 			<div class="popupButCont">
 				<a class="popupBut" id="retryBut" onclick="retryGame()">Retry</a>
 				<a class="popupBut" onclick="openNav()">Rules</a>
@@ -46,6 +45,11 @@
 	<div class="topNavBar">
 		<div id="scoreCont">
 			<div class="navButton" id="scoreVal">0</div>
+		</div>
+		<div id="perfectionCont">
+			<div class="navButton perfBut" id="perfCurNum">0</div>
+			<div class="navButton perfBut">/</div>
+			<div class="navButton perfBut" id="perfTotNum">0</div>
 		</div>
 		<div class="menuButCont">
 			<div class="navButton" onclick="openNav()">☰</div>

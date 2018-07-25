@@ -1,12 +1,14 @@
 function genTimer(){
-	curTime = totTime;
-	drawTimer();
-	showTime();	
-	timerID = setInterval( function() {
-		showTime();
-		checkTime();
-		curTime -= intTime;
-	}, intTime);
+	if(gameTimer === "true"){
+		curTime = totTime;
+		drawTimer();
+		showTime();	
+		timerID = setInterval( function() {
+			showTime();
+			checkTime();
+			curTime -= intTime;
+		}, intTime);
+	}
 }
 
 function drawTimer(){

@@ -1,18 +1,12 @@
-var canvas = document.getElementById('gameCanvas');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-var ctx = canvas.getContext('2d');
-
 var dim, circRadius, butRadius, lineThickness;
 
 var lineCol = [155, 193, 188];
 var actCol = [237, 106, 90];
 var backCol = [240, 245, 240];
-canvas.style.backgroundColor  = "rgb(" + backCol[0] + "," + backCol[1] + "," + backCol[2] + ")";
 
 var numOfButtons = 5;
 var numOfLinks = 5;
-var numOfPresses = 2;
+var numOfPresses = 5;
 var score = 0;
 
 var buttons = [];
@@ -24,3 +18,9 @@ var timerID;
 var totTime = 10000;
 var intTime = 10;
 var curTime = totTime;
+
+
+var gameTimer = sessionStorage.getItem('gameTimer');
+var gameLink = 	sessionStorage.getItem('gameLink');
+var gamePerfection = sessionStorage.getItem('gamePerfection');
+var perfNumOfClicks = 0;

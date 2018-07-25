@@ -6,6 +6,7 @@ function openLoserMenu() {
 function retryGame() {
 	document.getElementById("loserMenu").style.left = "-50%";
 	score = 0;
+	perfNumOfClicks = 0;
 	document.getElementById('scoreVal').innerHTML = score;
 	numOfButtons = document.getElementById("butDisp").innerHTML;
 	numOfLinks = document.getElementById("linkDisp").innerHTML;

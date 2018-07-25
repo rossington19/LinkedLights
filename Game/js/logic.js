@@ -1,3 +1,9 @@
+var canvas = document.getElementById('gameCanvas');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+var ctx = canvas.getContext('2d');
+canvas.style.backgroundColor  = "rgb(" + backCol[0] + "," + backCol[1] + "," + backCol[2] + ")";
+
 generate();
 
 function generate(){
@@ -50,9 +56,20 @@ function genStart(){
 }
 
 function drawAll(){
-	drawTimer();
-	for(var i = 0; i < numOfLinks; i++){
-		links[i].draw();
+	if (gamePerfection === "true"){
+		document.getElementById('perfectionCont').style.visibility = "visible";
+		document.getElementById('perfCurNum').innerHTML = perfNumOfClicks;
+		document.getElementById('perfTotNum').innerHTML = numOfPresses;
+	} else {
+		document.getElementById('perfectionCont').style.visibility = "hidden";
+	}
+	if(gameTimer === "true"){
+		drawTimer();
+	}
+	if(gameLink === "true"){
+		for(var i = 0; i < numOfLinks; i++){
+			links[i].draw();
+		}
 	}
 	for(var i = 0; i < numOfButtons; i++){
 		buttons[i].draw();
@@ -93,15 +110,31 @@ function restart(){
 	generate();
 }
 
+function checkPerfection(){
+	perfNumOfClicks++;
+	document.getElementById('perfCurNum').innerHTML = perfNumOfClicks;
+	if(perfNumOfClicks === numOfPresses && !isCompleted()){
+		clickable = false;
+		setTimeout(function(){ 
+			document.getElementById('popupTitle').innerHTML = "Failed!";
+			openLoserMenu();
+		}, 300);
+	}
+}
+
 canvas.addEventListener('click', function(e) {
 	if(clickable){
 		for(var i = 0; i < numOfButtons; i++){
 			if(e.offsetX + butRadius > buttons[i].xLoc && e.offsetX - butRadius < buttons[i].xLoc){
 				if(e.offsetY + butRadius > buttons[i].yLoc && e.offsetY - butRadius < buttons[i].yLoc){
 					buttons[i].clicked();
+					if(gamePerfection === "true"){
+						checkPerfection();
+					}
 					if(isCompleted()) {
 						clickable = false;
 						setTimeout(function(){ 
+							perfNumOfClicks = 0;
 							document.getElementById('scoreVal').innerHTML = ++score;
 							restart();
 						}, 300);
