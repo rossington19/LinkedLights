@@ -1,5 +1,10 @@
 function genTimer(){
 	if(gameTimer === "true"){
+		totTime = (numOfButtons * 750) + (numOfLinks * 1000);
+		if(gameLink === "false"){
+			totTime *= 1.5;
+		}
+		console.log(totTime);
 		curTime = totTime;
 		drawTimer();
 		showTime();	

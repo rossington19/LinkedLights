@@ -5,6 +5,7 @@ window.onload = function menuNumbers(){
 
 function openNav() {
     document.getElementById("menu").style.height = "100%";
+    menuLimit();
 }
 
 function closeNav() {
@@ -51,7 +52,7 @@ function menuLimit(){
 		linkUpArrow.add("disabledButton");
 	else
 		linkUpArrow.remove("disabledButton");
-	if(linkNum === "1")
+	if(linkNum === "3")
 		linkDownArrow.add("disabledButton");
 	else
 		linkDownArrow.remove("disabledButton");

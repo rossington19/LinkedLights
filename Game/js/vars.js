@@ -16,6 +16,7 @@ var clickable = false;
 
 var timerID;
 var totTime = 10000;
+
 var intTime = 10;
 var curTime = totTime;
 

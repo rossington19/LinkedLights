@@ -21,3 +21,8 @@ function gameHidden() {
 	sessionStorage.setItem('gameLink', false);
 	sessionStorage.setItem('gamePerfection', false);
 }
+
+function levelSelect(){
+	sessionStorage.setItem('buttonNum', document.getElementById("butDisp").innerHTML);
+	sessionStorage.setItem('linkNum', document.getElementById("linkDisp").innerHTML);
+}

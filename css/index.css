@@ -2,11 +2,12 @@ body {
 	margin: 0px;
 	height: 100vh;
 	background: var(--backCol);
+	font-variant: small-caps;
 }
 /**/
 #genCont {
  	position: relative;
-	top: 47.5%;
+	top: 50%;
 	transform: translateY(-50%);
 	text-align: center;
  	max-width: 300px;
@@ -24,6 +25,7 @@ body {
 #butCont {
 	margin-top: 5vh;
 	font-size: 1.5em;
+
 }
 
 .menuBut {
@@ -53,4 +55,10 @@ body {
 	color: var(--actCol);
 	margin: 0 auto;
 	font-weight: bolder;
+	font-variant: small-caps;
 }
+
+#levelSelCont{
+	color: #666;
+}
+

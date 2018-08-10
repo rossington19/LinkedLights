@@ -4,6 +4,12 @@ canvas.height = window.innerHeight;
 var ctx = canvas.getContext('2d');
 canvas.style.backgroundColor  = "rgb(" + backCol[0] + "," + backCol[1] + "," + backCol[2] + ")";
 
+if (sessionStorage.getItem('buttonNum') && sessionStorage.getItem('linkNum')) {
+		numOfButtons = sessionStorage.getItem('buttonNum'); 
+		numOfLinks = sessionStorage.getItem('linkNum');
+		// numOfPresses
+	}
+
 generate();
 
 function generate(){
