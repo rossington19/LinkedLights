@@ -6,7 +6,7 @@ var backCol = [240, 245, 240];
 
 var numOfButtons = 4;
 var numOfLinks = 3;
-var numOfPresses = 3;
+var numOfPresses = 5;
 var score = 0;
 
 var buttons = [];

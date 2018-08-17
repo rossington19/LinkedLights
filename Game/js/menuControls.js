@@ -110,6 +110,7 @@ function showHighscore(){
 			startButton.style.pointerEvents = "none";
 			for(var i = 0; i < 3; i++){
 				document.getElementById("levelStarblock").children[i].classList.remove("unlockedStar");
+				document.getElementById("levelStarblock").children[i].classList.remove("starOn");
 			}
 		}
 	}
