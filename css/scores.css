@@ -1,0 +1,105 @@
+#scoreTitle{
+	font-size: 2.5em;
+}
+
+#summary{
+	margin-top: 1.5em;
+	color: #666;
+	border-top: 5px solid var(--lineCol);
+	border-bottom: 5px solid var(--lineCol);
+	padding: 15px 5px; 
+	margin-bottom: 25px;
+
+}
+
+.summaryBox{
+	font-size: 1.25em;
+}
+
+.summaryTitle{
+	display: inline-block;
+	float: left;
+}
+
+.summaryStarblock{
+	display: inline-block;
+	transform: translate(-15px,0px);
+}
+
+.summaryValue{
+	display: inline-block;
+	float: right;
+	font-weight: bolder;
+	width: 60px;
+	text-align: right;
+}
+
+
+.scoreSection{
+	margin-top: 1em;
+	color: #666;
+	width: 275px;
+	margin: auto;
+	margin-bottom: 1.5em;
+}
+
+.subTitle{
+	font-size: 1.5em;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.scoreBlock{
+	text-align: left;
+	font-size: 1.25em;
+	margin-top: 0.5em;
+}
+
+.scoreLinkNum{
+	display: inline-block;
+	transform: translate(0,-3px);
+	color: #CCC;
+}
+
+.unlockedLinkNum{
+	color: #666;
+}
+
+.highscores{
+	display: inline-block;
+	font-weight: bold;
+	font-size: 1.2em;
+	text-align: center;
+	width: 50px;
+	margin-left: 38px;
+}
+
+.starblock{
+	display: inline-block;
+	float:right;
+}
+
+.star{
+	box-sizing: border-box;
+	display: inline-block;
+	height: 25px;
+	width: 25px;
+	border-radius: 15px;
+	background: var(--backCol);
+	border: 5px solid #CCC;
+}
+
+.unlockedStar{
+	background: var(--backCol);
+	border: 5px solid var(--lineCol);
+}
+
+.starOn{
+	background: var(--actCol) !important;
+	border: 0px;
+}
+
+.inGameStar{
+	    background: none;
+}
+

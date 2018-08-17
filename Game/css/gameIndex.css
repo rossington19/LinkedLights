@@ -24,21 +24,18 @@
 #menuNavBar{
 	position: absolute;
 	width: 100%;
-	/*background: red;*/
 	height: 15%;
 }
 
 #closeBut{
 	position: absolute;
 	right: 10%;
-
 	font-size: 4.5em;
 }
 
 #navExit{
 	position: absolute;
 	left: 10%;
-
 	font-size: 2em;
 	text-decoration: none;
 	font-weight: bolder;
@@ -68,22 +65,11 @@
 	margin-right: 0.3em;
 }
 
+
 .disabledButton{
 	visibility: hidden;
 }
 
-#menuApply{
-	margin-top: 1em;
-	display: inline-block;
-	font-size: 2em;
-	font-weight: bolder;
-	background-color: var(--actCol);
-	color: var(--backCol);
-	border-radius: 0.3em;
-	padding: 0.5em;
-	width: 40%;
-	text-decoration: none;
-}
 
 /*************NAV**************/
 
@@ -126,7 +112,7 @@
 }
 
 #highScoreCont{
-	margin-top: 1em;
+	margin-top: 0.5em;
 	font-size: 1.5em;
 }
 

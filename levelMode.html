@@ -4,9 +4,11 @@
 	
 	<link rel="stylesheet" type="text/css" href="css/index.css"/>
 	<link rel="stylesheet" type="text/css" href="css/globalCSS.css"/>
+	<link rel="stylesheet" type="text/css" href="css/scores.css"/>
 	<link rel="stylesheet" type="text/css" href="Game/css/gameIndex.css" />
 	
 	<body>
+		<a id="homeBut" href="playMode.html"><</a>
 		<div id="genCont">
 			<div class="pageTitle">Level Select</div>
 			<div id="levelSelCont">
@@ -23,17 +25,20 @@
 					<a class="menuSel" id="linkUpArrow"  onclick="menuInc('linkDisp')">►</a>
 				</div>
 				<div id="highScoreCont">
-					<div class="highScoreText">Highscore = </div>
-					<div class="highScoreText" id="highScore">X</div>
-					<div class="highScoreText"> / </div>
-					<div class="highScoreText" id="highScoreTarget">X</div>
+					<div class="highScoreText">Highscore: </div>
+					<div class="highScoreText" id="highScore">0</div>
+					<div id="levelStarblock">
+						<div class="star unlockedStar"></div>
+						<div class="star unlockedStar"></div>
+						<div class="star unlockedStar"></div>
+					</div>
 				</div>
-				<a id="menuApply"  href="Game/gameIndex.html" onclick="levelSelect()"> Start </a>
+				<a id="startButton"  href="Game/gameIndex.html" onclick="levelSelect()"> Start </a>
 			</div>
-
 		</div>
 	</body>
 	<script language="javascript" type="text/javascript" src="Game/js/vars.js"></script>
 	<script language="javascript" type="text/javascript" src="Game/js/menuControls.js"></script>
 	<script language="javascript" type="text/javascript" src="gameSelect.js"></script>
+	<script type="text/javascript">showHighscore();</script>
 </html>  

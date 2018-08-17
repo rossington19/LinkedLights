@@ -128,6 +128,13 @@ function checkPerfection(){
 	}
 }
 
+function checkHighscore(){
+	currentScoreRef = sessionStorage.getItem('gameMode') + " " + numOfButtons + "-" + numOfLinks;
+	if(score > localStorage.getItem(currentScoreRef)){
+		localStorage.setItem(currentScoreRef, score);
+	}
+}
+
 canvas.addEventListener('click', function(e) {
 	if(clickable){
 		for(var i = 0; i < numOfButtons; i++){
@@ -142,6 +149,7 @@ canvas.addEventListener('click', function(e) {
 						setTimeout(function(){ 
 							perfNumOfClicks = 0;
 							document.getElementById('scoreVal').innerHTML = ++score;
+							checkHighscore();
 							restart();
 						}, 300);
 					}
@@ -150,3 +158,5 @@ canvas.addEventListener('click', function(e) {
 		}
 	}
 });
+
+

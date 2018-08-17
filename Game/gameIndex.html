@@ -5,6 +5,8 @@
 	<link rel="stylesheet" type="text/css" href="css/gameIndex.css" />
 	<link rel="stylesheet" type="text/css" href="css/popupMenus.css" />
 	<link rel="stylesheet" type="text/css" href="../css/globalCSS.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/index.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/scores.css"/>
 	<head>
 	</head>
 	
@@ -15,6 +17,8 @@
 			<a class="navButton" id="navExit" href="../index.html">Exit</a>
 			<div class="navButton" id="closeBut" onclick="closeNav()">&times;</div>
 		</div>
+		<!--  -->
+
 		<div class="menuCont">
 			<div class="menuTitle">Buttons</div>
 			<div class="menuSelCont">
@@ -29,13 +33,18 @@
 				<a class="menuSel" id="linkUpArrow"  onclick="menuInc('linkDisp')">►</a>
 			</div>
 			<div id="highScoreCont">
-					<div class="highScoreText">Highscore = </div>
-					<div class="highScoreText" id="highScore">X</div>
-					<div class="highScoreText"> / </div>
-					<div class="highScoreText" id="highScoreTarget">X</div>
+				<div class="highScoreText">Highscore: </div>
+				<div class="highScoreText" id="highScore">0</div>
+				<div id="levelStarblock">
+					<div class="star unlockedStar inGameStar"></div>
+					<div class="star unlockedStar inGameStar"></div>
+					<div class="star unlockedStar inGameStar"></div>
 				</div>
-			<div id="menuApply" onclick="menuApply()"> Apply </div>
+			</div>
+			<div id="startButton" onclick="menuApply()">Start</div>
 		</div>
+
+		<!--  -->
 	</div>
 
 	<div id ="loserMenu">

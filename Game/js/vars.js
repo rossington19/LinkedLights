@@ -4,8 +4,8 @@ var lineCol = [155, 193, 188];
 var actCol = [237, 106, 90];
 var backCol = [240, 245, 240];
 
-var numOfButtons = 5;
-var numOfLinks = 5;
+var numOfButtons = 4;
+var numOfLinks = 3;
 var numOfPresses = 3;
 var score = 0;
 
