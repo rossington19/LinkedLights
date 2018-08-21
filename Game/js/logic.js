@@ -5,12 +5,10 @@ var ctx = canvas.getContext('2d');
 canvas.style.backgroundColor  = "rgb(" + backCol[0] + "," + backCol[1] + "," + backCol[2] + ")";
 
 if (sessionStorage.getItem('buttonNum') && sessionStorage.getItem('linkNum')) {
-		numOfButtons = sessionStorage.getItem('buttonNum'); 
-		numOfLinks = sessionStorage.getItem('linkNum');
-		// numOfPresses
-	}
-
-generate();
+	numOfButtons = sessionStorage.getItem('buttonNum'); 
+	numOfLinks = sessionStorage.getItem('linkNum');
+}
+generate(numOfButtons);
 
 function generate(){
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -20,7 +18,7 @@ function generate(){
 		buttons[i].calcCenter();
 	}
 	generateLinks();
-	genTimer();
+	generateTimer();
 	genStart();
 	clickable = true;
 	resizeCanvas();
@@ -145,6 +143,8 @@ canvas.addEventListener('click', function(e) {
 						checkPerfection();
 					}
 					if(isCompleted()) {
+						console.log("SOLVED");
+						intTime = 0;
 						clickable = false;
 						setTimeout(function(){ 
 							perfNumOfClicks = 0;

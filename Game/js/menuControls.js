@@ -5,12 +5,12 @@ window.onload = function menuNumbers(){
 }
 
 function openNav() {
-    document.getElementById("menu").style.height = "100%";
+   document.getElementById("menu").style.top = "0%";
     menuLimit();
 }
 
 function closeNav() {
-    document.getElementById("menu").style.height = "0%";
+    document.getElementById("menu").style.top = "-100%";
     document.getElementById("butDisp").innerHTML = numOfButtons;
 	document.getElementById("linkDisp").innerHTML = numOfLinks;
 	menuLimit();
@@ -61,7 +61,7 @@ function menuLimit(){
 }
 
 function menuApply() {
-	document.getElementById("menu").style.height = "0%";
+	document.getElementById("menu").style.top = "-100%";
 	retryGame();
 }
 
@@ -86,32 +86,31 @@ function showHighscore(){
 	}
 	document.getElementById("highScore").innerHTML = highscore;
 	
-	if(sessionStorage.getItem('gameMode') != "Free Play"){
-		startButton = document.getElementById("startButton");
-		if(linkNum === "3" || localStorage.getItem(sessionStorage.getItem('gameMode') + " " + butNum + "-" + prevLink) >= 10){
-			startButton.style.background = "var(--lineCol)";
-			startButton.innerHTML = "Start";
-			startButton.href="Game/gameIndex.html"
-			startButton.style.pointerEvents = "auto";
-			for(var i = 0; i < 3; i++){
-				if (highscore >= (i+1)*10){
-					document.getElementById("levelStarblock").children[i].classList.add("unlockedStar");
-					document.getElementById("levelStarblock").children[i].classList.add("starOn");
-				} else {
-					document.getElementById("levelStarblock").children[i].classList.add("unlockedStar");
-					document.getElementById("levelStarblock").children[i].classList.remove("starOn");
-				}
-			}
 
-		} else {
-			startButton.style.background = "#CCC";
-			startButton.innerHTML = "Locked";
-			startButton.href = "#";
-			startButton.style.pointerEvents = "none";
-			for(var i = 0; i < 3; i++){
-				document.getElementById("levelStarblock").children[i].classList.remove("unlockedStar");
+	startButton = document.getElementById("startButton");
+	if(linkNum === "3" || localStorage.getItem(sessionStorage.getItem('gameMode') + " " + butNum + "-" + prevLink) >= 10 || sessionStorage.getItem('gameMode') === "Free Play"){
+		startButton.style.background = "var(--lineCol)";
+		startButton.innerHTML = "Start";
+		startButton.href="Game/gameIndex.html"
+		startButton.style.pointerEvents = "auto";
+		for(var i = 0; i < 3; i++){
+			if (highscore >= (i+1)*10){
+				document.getElementById("levelStarblock").children[i].classList.add("unlockedStar");
+				document.getElementById("levelStarblock").children[i].classList.add("starOn");
+			} else {
+				document.getElementById("levelStarblock").children[i].classList.add("unlockedStar");
 				document.getElementById("levelStarblock").children[i].classList.remove("starOn");
 			}
+		}
+
+	} else {
+		startButton.style.background = "#CCC";
+		startButton.innerHTML = "Locked";
+		startButton.href = "#";
+		startButton.style.pointerEvents = "none";
+		for(var i = 0; i < 3; i++){
+			document.getElementById("levelStarblock").children[i].classList.remove("unlockedStar");
+			document.getElementById("levelStarblock").children[i].classList.remove("starOn");
 		}
 	}
 }

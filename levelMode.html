@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	
 	<link rel="stylesheet" type="text/css" href="css/index.css"/>
 	<link rel="stylesheet" type="text/css" href="css/globalCSS.css"/>
@@ -8,21 +8,21 @@
 	<link rel="stylesheet" type="text/css" href="Game/css/gameIndex.css" />
 	
 	<body>
-		<a id="homeBut" href="playMode.html">◄</a>
+		<a id="homeBut" href="playMode.html">&#9668;</a>
 		<div id="genCont">
 			<div class="pageTitle">Level Select</div>
 			<div id="levelSelCont">
 				<div class="menuTitle">Buttons</div>
 				<div class="menuSelCont">
-					<a class="menuSel" id="butDownArrow" onclick="menuDec('butDisp')" >◄</a>
+					<a class="menuSel" id="butDownArrow" onclick="menuDec('butDisp')" >&#9668;</a>
 					<div class="menuSel" id="butDisp">0</div>
-					<a class="menuSel" id="butUpArrow" onclick="menuInc('butDisp')">►</a>
+					<a class="menuSel" id="butUpArrow" onclick="menuInc('butDisp')">&#9658;</a>
 				</div>
 				<div class="menuTitle">Links</div>
 				<div class="menuSelCont">
-					<a class="menuSel" id="linkDownArrow" onclick="menuDec('linkDisp')">◄</a>
+					<a class="menuSel" id="linkDownArrow" onclick="menuDec('linkDisp')">&#9668;</a>
 					<div class="menuSel" id="linkDisp">0</div>
-					<a class="menuSel" id="linkUpArrow"  onclick="menuInc('linkDisp')">►</a>
+					<a class="menuSel" id="linkUpArrow"  onclick="menuInc('linkDisp')">&#9658;</a>
 				</div>
 				<div id="highScoreCont">
 					<div class="highScoreText">Highscore: </div>
@@ -40,5 +40,11 @@
 	<script language="javascript" type="text/javascript" src="Game/js/vars.js"></script>
 	<script language="javascript" type="text/javascript" src="Game/js/menuControls.js"></script>
 	<script language="javascript" type="text/javascript" src="gameSelect.js"></script>
+	<script type='application/javascript' src='lib/fastclick.js'></script>
+	<script type="application/javascript">
+			 window.addEventListener('load', function() {
+					FastClick.attach(document.body);
+			}, false);
+	</script> 
 	<script type="text/javascript">showHighscore();</script>
 </html>  

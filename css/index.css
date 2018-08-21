@@ -77,10 +77,10 @@ body {
 }
 
 #homeBut{
+	z-index: 1;
 	position: absolute;
 	font-size: 1.5em;
-	padding-top: 0.5em;
-	padding-left: 0.75em;
+	padding: 1.25em 1em;
 	color: #CCC;
 	text-decoration: none;
 }	

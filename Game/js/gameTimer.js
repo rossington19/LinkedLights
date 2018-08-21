@@ -1,5 +1,6 @@
-function genTimer(){
+function generateTimer(){
 	if(gameTimer === "true"){
+		intTime = 10;
 		totTime = (numOfButtons * 750) + (numOfLinks * 1000);
 		if(gameLink === "false"){
 			totTime *= 2;
@@ -11,13 +12,14 @@ function genTimer(){
 			showTime();
 			checkTime();
 			curTime -= intTime;
+			console.log(curTime);
 		}, intTime);
 	}
 }
 
 function drawTimer(){
 	ctx.beginPath();
-	ctx.arc(canvas.width/2, canvas.height/2, circRadius+(1.5*butRadius), 0, 2*Math.PI,);
+	ctx.arc(canvas.width/2, canvas.height/2, circRadius+(1.5*butRadius), 0, 2*Math.PI);
 	ctx.lineWidth = lineThickness;
 	ctx.strokeStyle = "rgb(" + lineCol[0] + "," + lineCol[1] + "," + lineCol[2] + ")";
 	ctx.stroke();

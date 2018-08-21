@@ -1,12 +1,12 @@
 <!DOCTYPE HTML>
 <html>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	
 	<link rel="stylesheet" type="text/css" href="css/index.css"/>
 	<link rel="stylesheet" type="text/css" href="css/globalCSS.css"/>
 	
 	<body>
-		<a id="homeBut" href="index.html">◄</a>
+		<a id="homeBut" href="index.html">&#9668;</a>
 		<div id="genCont">
 			<div class="pageTitle">Game Modes</div>
 			<div id="butCont">
@@ -19,4 +19,10 @@
 	</body>
 	<script language="javascript" type="text/javascript" src="Game/js/vars.js"></script>
 	<script language="javascript" type="text/javascript" src="gameSelect.js"></script>
+	<script type='application/javascript' src='lib/fastclick.js'></script>
+	<script type="application/javascript">
+			 window.addEventListener('load', function() {
+					FastClick.attach(document.body);
+			}, false);
+	</script> 
 </html>  

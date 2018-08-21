@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	
 	<link rel="stylesheet" type="text/css" href="css/gameIndex.css" />
 	<link rel="stylesheet" type="text/css" href="css/popupMenus.css" />
@@ -11,7 +11,6 @@
 	</head>
 	
 	<body>
-	
 	<div id="menu">
 		<div id="menuNavBar">
 			<a class="navButton" id="navExit" href="../index.html">Exit</a>
@@ -22,15 +21,15 @@
 		<div class="menuCont">
 			<div class="menuTitle">Buttons</div>
 			<div class="menuSelCont">
-				<a class="menuSel" id="butDownArrow" onclick="menuDec('butDisp')" >◄</a>
+				<a class="menuSel" id="butDownArrow" onclick="menuDec('butDisp')" >&#9668;</a>
 				<div class="menuSel" id="butDisp">0</div>
-				<a class="menuSel" id="butUpArrow" onclick="menuInc('butDisp')">►</a>
+				<a class="menuSel" id="butUpArrow" onclick="menuInc('butDisp')">&#9658;</a>
 			</div>
 			<div class="menuTitle">Links</div>
 			<div class="menuSelCont">
-				<a class="menuSel" id="linkDownArrow" onclick="menuDec('linkDisp')">◄</a>
+				<a class="menuSel" id="linkDownArrow" onclick="menuDec('linkDisp')">&#9668;</a>
 				<div class="menuSel" id="linkDisp">0</div>
-				<a class="menuSel" id="linkUpArrow"  onclick="menuInc('linkDisp')">►</a>
+				<a class="menuSel" id="linkUpArrow"  onclick="menuInc('linkDisp')">&#9658;</a>
 			</div>
 			<div id="highScoreCont">
 				<div class="highScoreText">Highscore: </div>
@@ -68,21 +67,24 @@
 			<div class="navButton perfBut" id="perfTotNum">0</div>
 		</div>
 		<div class="menuButCont">
-			<div class="navButton" onclick="openNav()">☰</div>
+			<div class="navButton" onclick="openNav()">&#9776;</div>
 		</div>
-	</div> 
-
-	
+	</div> 	
 	<canvas id="gameCanvas"></canvas>
-
-
 	</body>
 
 	<script language="javascript" type="text/javascript" src="js/vars.js"></script>
 	<script language="javascript" type="text/javascript" src="js/button.js"></script>
 	<script language="javascript" type="text/javascript" src="js/link.js"></script>
-	<script language="javascript" type="text/javascript" src="js/timer.js"></script>
+	<script language="javascript" type="text/javascript" src="js/gameTimer.js"></script>
 	<script language="javascript" type="text/javascript" src="js/logic.js"></script>
 	<script language="javascript" type="text/javascript" src="js/menuControls.js"></script>
 	<script language="javascript" type="text/javascript" src="js/loserMenu.js"></script>
+	<script type='application/javascript' src='../lib/fastclick.js'></script>
+	<script type="application/javascript">
+			 window.addEventListener('load', function() {
+					FastClick.attach(document.body);
+					FastClick.attach(document.canvas);
+			}, false);
+	</script> 
 </html>  

@@ -11,7 +11,8 @@
 }
 
 #menu {
-	height: 0%;
+	top: -100%;
+	height: 100%;
     width: 100%;
     position: fixed;
     z-index: 2;
@@ -30,7 +31,7 @@
 #closeBut{
 	position: absolute;
 	right: 10%;
-	font-size: 4.5em;
+	font-size: 3.5em;
 }
 
 #navExit{
@@ -84,7 +85,7 @@
     top: 50%;
     transform: translateY(-50%);
 	color: #999;
-	font-size: 3em;
+	font-size: 2em;
 }
 
 .menuButCont{
@@ -95,7 +96,7 @@
 
 .perfBut{
 	display: inline-block;
-	font-size: 2em;
+	font-size: 1.5em;
 }
 
 #scoreCont{
