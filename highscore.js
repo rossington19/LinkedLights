@@ -53,7 +53,7 @@ function getHighscores(){
 			}
 		}
 	}
-	document.getElementById("unlocked").innerHTML = (unlockVal-5) + "0 / 60"
+	document.getElementById("unlocked").innerHTML = (unlockVal-5) + " / 60"
 	document.getElementById("10streak").innerHTML = streak10 + " / 65"
 	document.getElementById("20streak").innerHTML = streak20 + " / 65"
 	document.getElementById("30streak").innerHTML = streak30 + " / 65"
