@@ -23,14 +23,14 @@
 
 .summaryStarblock{
 	display: inline-block;
-	transform: translate(-15px,0px);
+	transform: translate(-10px,0px);
 }
 
 .summaryValue{
 	display: inline-block;
 	float: right;
 	font-weight: bolder;
-	width: 60px;
+	width: 70px;
 	text-align: right;
 }
 

@@ -12,7 +12,6 @@ function generateTimer(){
 			showTime();
 			checkTime();
 			curTime -= intTime;
-			console.log(curTime);
 		}, intTime);
 	}
 }
