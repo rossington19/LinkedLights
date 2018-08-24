@@ -66,6 +66,12 @@
 	margin-right: 0.3em;
 }
 
+#levelSelCont #butUpArrow:active, #levelSelCont #butDownArrow:active{
+	color: #333;
+}
+#gameDropDown #butUpArrow:active, #gameDropDown #butDownArrow:active{
+	color: #888;
+}
 
 .disabledButton{
 	visibility: hidden;
